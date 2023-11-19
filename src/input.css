@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-primary text-secondary;
+}
+
+.flex-center{
+    @apply flex justify-center items-center;
+}
+
+.flex-between{
+    @apply flex justify-between items-center;
+}
