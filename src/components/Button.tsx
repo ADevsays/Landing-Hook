@@ -1,15 +1,30 @@
 import { ReactNode } from "react";
 
-interface Props{
+interface Props {
     children: ReactNode,
-    className?: string | ''
+    className?: string | '',
+    href?: string
 }
-function Button({children, className}:Props) {
+function Button({ children, className, href }: Props) {
+    const defaultClasses = 'p-4 rounded-xl font-medium shadow-lg transition-transform hover:scale-95 ';
     return (
-        <button 
-            className={`bg-terciary text-secondary p-2 px-3 rounded-xl font-medium ${className}`}>
-            {children}
-        </button>
+        <>
+            {
+            !href &&
+                <button
+                    className={`${defaultClasses} ${className}`}>
+                    {children}
+                </button>
+            }
+             {
+            href &&
+                <a 
+                    href={href}
+                    className={`${defaultClasses} ${className}`}>
+                    {children}
+                </a>
+            }
+        </>
     );
 }
 

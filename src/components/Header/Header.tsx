@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 function Header() {
     return (
-        <header className='flex-between w-full shadow-lg p-4'>
+        <header className='flex-between w-full shadow-lg p-4 z-[100] '>
             <Logo/>
             <Navbar/>
         </header>

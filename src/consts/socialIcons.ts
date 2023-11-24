@@ -1,7 +1,7 @@
 const socialIcons = [
     'tiktok',
     'instagram',
-    'youtube',
+    'twitter',
 ];
 
 export default socialIcons;

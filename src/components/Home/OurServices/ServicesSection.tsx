@@ -1,22 +1,26 @@
-import beneficServices from "../../../consts/benefictServices";
 import SubtitleSection from "../SubtitleSection";
-import CardBenefitServices from "./CardBenefitServices";
+import CardServices from "./CardServices";
+import BgImage from '../../../Imgs/Background-geometryforms_2.png';
+import services from "../../../consts/services";
 
 function ServicesSection() {
     return (
-        <section className="bg-primary p-20">
-            <SubtitleSection subtitle="Beneficios de Contratar" underline="Nuestros Servicios"/>
-            <div className="flex items-center md:justify-between gap-4 justify-center relative top-[-40px] flex-wrap">
-               {
-                beneficServices.map((service, index)=>(
-                    <CardBenefitServices
-                        key={index}
+        <section
+            id="servicios" 
+            style={{
+                backgroundImage: `url(${BgImage})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+            }}
+            className="w-full bg-primary p-10 pb-20">
+            <SubtitleSection subtitle="Nuestros" underline="Servicios"/>
+            <div className="flex items-center md:justify-center gap-20 justify-center relative top-[-40px] flex-wrap">
+                {services.map(service=>(
+                    <CardServices 
                         title={service.title}
-                        content={service.content}
                         img={service.img}
-                    /> 
-                ))
-               }
+                        characteristics={service.characteristics}/>
+                ))} 
             </div>
         </section>
     );

@@ -21,7 +21,7 @@ function Footer() {
                 content="Contamos con un plan para afiliados
                 si estas interesado en unirte y ganar comisiones de hasta el 30%"
                 className="border-b lg:border-r border-gray-700 lg:border-b-0">
-                    <Button className="mt-3">
+                    <Button className="mt-3 btn-primary">
                         Conviértete en afiliado
                     </Button>
             </FooterItem>

@@ -3,9 +3,10 @@ import BlobHome from '../../Imgs/Blob_Home.svg';
 function BlobBg() {
     return (
         <div  style={{backgroundImage:`url(${BlobHome})`,
-                backgroundPosition:'100px 120%',
-                backgroundRepeat: 'no-repeat'}}
-            className="absolute w-full h-screen top-0 left-0 opacity-30"></div>
+                backgroundPosition:'48% 120%',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize:''}}
+            className="absolute w-[800px] top-0 right-0 opacity-30 animate-blob"></div>
     );
 }
 

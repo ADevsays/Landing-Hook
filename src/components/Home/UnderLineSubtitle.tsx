@@ -10,7 +10,7 @@ function UnderLineSubtitle({className}:Props) {
             style={{
                 backgroundImage: `url(${UnderlineSubtitle})`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'calc(50% - 10px) -30px',
+                backgroundPosition: 'calc(50% - 7px) -30px',
                 backgroundSize: 'contain',
             }}
             className={`w-full h-[140px] ${className}`}

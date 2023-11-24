@@ -2,14 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     @apply bg-primary text-secondary;
-}
+};
 
 .flex-center{
     @apply flex justify-center items-center;
-}
+};
 
 .flex-between{
     @apply flex justify-between items-center;
+};
+
+.btn-primary{
+    @apply bg-terciary text-secondary;
+};
+
+.btn-secondary{
+    @apply bg-primary text-secondary;
+};
+
+.animate-blob{
+    animation: blob 0.6s ease forwards;
+    object-position: 55% 0px;
+}
+
+.animate-img{
+    animation: img 0.5s ease forwards;
+}
+
+@keyframes img {
+    from {
+        transform: scale(.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes blob {
+    from {
+        height: 0;
+    }
+    to{
+        height: 800px;
+    }
 }
