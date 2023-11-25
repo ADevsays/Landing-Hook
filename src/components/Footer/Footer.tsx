@@ -10,7 +10,7 @@ function Footer() {
                 title="Nosotros"
                 content="Contamos con redes sociales
                 en las que puedes comunicarte con nosotros"
-                className="border-b lg:border-r border-gray-700 lg:border-b-0">
+                className="border-b lg:border-r border-gray-700 lg:border-b-0 pb-20">
                     <span className="mt-4 block absolute left-[30px]">
                         <SocialMediaMap/>
                     </span>

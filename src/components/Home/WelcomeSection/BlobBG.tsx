@@ -1,4 +1,4 @@
-import BlobHome from '../../Imgs/Blob_Home.svg';
+import BlobHome from '../../../Imgs/WelcomeSection/Blob_Home.svg';
 
 function BlobBg() {
     return (

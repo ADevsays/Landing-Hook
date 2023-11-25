@@ -5,9 +5,9 @@ import CardBenefitServices from "./CardBenefitServices";
 
 function ServicesBenefitSection() {
     return (
-        <section className="bg-primary-dark p-20 w-full">
-            <SubtitleSection subtitle="Beneficios de Contratar" underline="Nuestros Servicios"/>
-            <div className="flex items-center md:justify-between gap-4 justify-center relative top-[-40px] flex-wrap">
+        <section className="bg-primary-dark p-0 px-12 pb-20 w-full mt-4">
+            <SubtitleSection subtitle="Beneficios de " underline="Contratarnos"/>
+            <div className="flex items-center gap-12 justify-center relative top-[-40px] flex-wrap">
                {
                 beneficServices.map(({title, content, img}, index)=>(
                     <CardBenefitServices

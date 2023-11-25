@@ -1,6 +1,6 @@
-import GraphicIcon from '../Imgs/Graphic_Icon_3.svg';
-import RedIcon from '../Imgs/red_icon.svg';
-import MovilIcon from '../Imgs/Movil_icon.svg';
+import GraphicIcon from '../Imgs/BenefitSection/Graphic_Icon_3.svg';
+import RedIcon from '../Imgs/BenefitSection/red_icon.svg';
+import MovilIcon from '../Imgs/BenefitSection/Movil_icon.svg';
 
 const beneficServices = [
     {

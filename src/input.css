@@ -35,6 +35,75 @@ body{
     animation: img 0.5s ease forwards;
 }
 
+.animate-card{
+   animation: card 0.5s ease forwards; 
+}
+
+.animate-plan{
+    animation: plan 0.4s ease forwards;
+}
+.animate-close-plan{
+    animation: closePlan 0.4s ease forwards;
+}
+
+.animate-close-plan > *{
+    animation: closePlanChildren 0.1s forwards;
+}
+
+@keyframes cardPlanFadeIn {
+    from{
+        transform: scale(.9);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes closePlanChildren {
+        to{
+            opacity: 0;
+            min-height: 0;
+        }
+}
+
+@keyframes closePlan {
+    from{
+        height: 400px;
+        min-height: 400px;
+        opacity: 1;
+    }
+    to{
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes plan {
+    from{
+        height: 0px;
+        opacity: 0;
+        min-height: 0px;
+
+    }
+    to{
+        opacity: 1;
+        min-height: 400px;
+    }
+}
+
+@keyframes card {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes img {
     from {
         transform: scale(.5);

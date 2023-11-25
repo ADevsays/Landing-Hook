@@ -2,12 +2,12 @@
 interface Props{
     title:string, 
     content:string, 
-    img:string
+    img:string,
 }
 
 function CardBenefitServices({title, content, img}:Props) {
     return (
-        <div className='w-[320px] bg-secondary text-primary rounded-xl flex-center flex-col'>
+        <div className='transition-transform hover:scale-[1.05] w-[320px] bg-secondary text-primary rounded-xl flex-center flex-col select-none'>
             <div className='bg-secondary rounded-t-xla border-b-2 border-primary-dark'>
                 <img className='w-full object-contain max-h-[200px]' src={img} alt="" />
             </div>

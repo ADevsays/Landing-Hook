@@ -1,5 +1,5 @@
-import Button from "../Button";
-import ImageHome from '../../Imgs/Image_Home.jpg';
+import Button from "../../Button";
+import ImageHome from '../../../Imgs/WelcomeSection/Image_Home.jpg';
 import BlobBg from "./BlobBG";
 
 function WelcomeSection() {

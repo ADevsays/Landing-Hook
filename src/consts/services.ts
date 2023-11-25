@@ -1,6 +1,6 @@
-import APPImg from '../Imgs/service_apps.svg';
-import MaintenanceImg from '../Imgs/service_mantenimiento.svg';
-import AdvisoryImg from '../Imgs/service_asesoria.svg';
+import APPImg from '../Imgs/Services/service_apps.svg';
+import MaintenanceImg from '../Imgs/Services/service_mantenimiento.svg';
+import AdvisoryImg from '../Imgs/Services/service_asesoria.svg';
 
 const services = [
     {
