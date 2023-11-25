@@ -7,7 +7,7 @@ interface Props{
 }
 
 function DropDownMenu({menu}:Props) {
-    const menuClasses = 'block flex-center flex-col absolute border left-[-85px]  h-auto p-2 bg-secondary text-primary rounded-lg font-medium';
+    const menuClasses = 'block z-[99] flex-center flex-col absolute border left-[-85px]  h-auto p-2 bg-secondary text-primary rounded-lg font-medium';
     return (
         <div className={menu ? menuClasses : 'hidden'}>
                 {

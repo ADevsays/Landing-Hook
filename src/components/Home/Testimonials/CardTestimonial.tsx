@@ -14,7 +14,7 @@ function CardTestimonial({content, img, name}:Props) {
     return (
         <div 
             ref={ref}
-            className={`${inView ? 'animate-card' : ''} opacity-0 bg-primary w-[600px] max-h-[140px] rounded-3xl relative`}>
+            className={`${inView ? 'animate-card' : ''} opacity-0 bg-primary min-w-[120px] max-w-[600px] min-h-[140px] rounded-3xl relative`}>
             <p className="p-8 text-center">
                 {content}
             </p>

@@ -8,10 +8,10 @@ function AboutUsSection() {
         <section id="nosotros" className="w-full min-h-[480px]a bg-primary pt-12">
             <SubtitleSection subtitle="Sobre" underline="nosotros" />
             <div className="flex w-full justify-between">
-                <div className="w-1/2 pr-4 relative top-[-100px]">
+                <div className="w-1/2 pr-4 relative top-[-100px] lg:block hidden">
                     <img className="w-full h-full" src={HookBg} />
                 </div>
-                <div className="w-2/4 flex flex-col items-start px-12">
+                <div className="lg:w-2/4 relative lg:top-0 top-[-70px] w-full flex flex-col items-start sm:px-12 px-4">
                     <ParagraphAboutUs
                         title="¿Quiénes somos"
                         contentOne=" HOOK es una empresa joven y dinámica fundada por dos amigos con una visión compartida: impulsar a pequeñas empresas y emprendedores mediante soluciones de software innovadoras."
