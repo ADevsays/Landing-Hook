@@ -5,6 +5,7 @@ import ServicesSection from "./OurServices/ServicesSection";
 import AboutUsSection from "./AboutUs/AboutUsSection";
 import WelcomeSection from "./WelcomeSection/WelcomeSection";
 import TestimonialsSection from "./Testimonials/TestimonialsSection";
+import ContectSection from "./Contact/ContactSection";
 
 function Home() {
     const [plan, setPlan] = useState({} as PlanInfo);
@@ -20,6 +21,7 @@ function Home() {
             <ServicesBenefitSection/>
             <AboutUsSection/>
             <TestimonialsSection/>
+            <ContectSection/>
         </main>
     );
 }

@@ -47,7 +47,7 @@ body{
 }
 
 .animate-close-plan > *{
-    animation: closePlanChildren 0.1s forwards;
+    animation: closePlanChildren 0.3s forwards;
 }
 
 @keyframes cardPlanFadeIn {
@@ -62,10 +62,12 @@ body{
 }
 
 @keyframes closePlanChildren {
-        to{
-            opacity: 0;
-            min-height: 0;
-        }
+    to{
+        opacity: 0;
+        min-height: 0;
+        height: 0;
+        display: none;
+    }
 }
 
 @keyframes closePlan {
@@ -85,7 +87,6 @@ body{
         height: 0px;
         opacity: 0;
         min-height: 0px;
-
     }
     to{
         opacity: 1;

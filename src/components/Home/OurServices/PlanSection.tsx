@@ -16,7 +16,7 @@ function PlanSection({plan}:Props) {
         setStatePlan(false);
     }
     return (
-        <section id="planes" className={`${statePlan ? 'animate-plan' : 'animate-close-plan'} relative pt-8 pb-20 border-b border-gray-700`}>
+        <section id="planes" className={`${statePlan ? 'animate-plan' : 'animate-close-plan'} z-99 relative pt-8 pb-20 border-b border-gray-700`}>
            <h4 className="w-full mt-10 font-bold text-center text-xl">
                 {type}
                 <br />

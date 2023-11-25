@@ -5,7 +5,7 @@ import SendEmail from "./SendEmail";
 
 function Footer() {
     return (
-        <footer className="flex justify-center items-start flex-wrap p-5 pb-10">
+        <footer className="flex justify-center items-start flex-wrap p-5 pb-10 bg-primary-dark">
             <FooterItem
                 title="Nosotros"
                 content="Contamos con redes sociales
