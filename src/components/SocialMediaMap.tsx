@@ -6,7 +6,10 @@ function SocialMediaMap() {
         <>
             {
                 socialIcons.map((icon, index) => (
-                    <SocialMediaIcon key={index} iconName={icon} />
+                    <SocialMediaIcon 
+                        key={index} 
+                        iconName={icon.icon}
+                        path={icon.path} />
                 ))
             }
         </>

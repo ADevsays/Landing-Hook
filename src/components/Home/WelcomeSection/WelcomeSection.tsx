@@ -1,5 +1,5 @@
 import Button from "../../Button";
-import ImageHome from '../../../Imgs/WelcomeSection/Image_Home.jpg';
+import ImageHome from '../../../Imgs/WelcomeSection/Image_Home.webp';
 import BlobBg from "./BlobBG";
 import { defaultMsg, whatsappApi } from "../../../consts/whatsappUrl";
 
@@ -7,7 +7,7 @@ function WelcomeSection() {
     const whatsapp = `${whatsappApi}${defaultMsg}`;
     return (
         <section
-            className="flex lg:p-28 p-6 py-16  h-screen gap-20 relative overflow-hidden lg:text-left text-center">
+            className="flex lg:items-start items-center pt-0 lg:p-28 p-6 py-16  h-screen gap-20 relative overflow-hidden lg:text-left text-center">
             <BlobBg />
             <div className="relative lg:w-1/2 w-full">
                 <h1 className="text-4xl font-bold">Transformamos ideas en código <br />
@@ -36,11 +36,11 @@ function WelcomeSection() {
                     <i className="bi bi-chat-quote-fill"></i>
                 </span>
             </div>
-            <div className="w-1/2 relative lg:block hidden">
+            <div className="w-1/2 relative lg:block hidden mt-2">
                 <img
-                    className="w-full animate-img shadow-xl h-full rounded-3xl min-h-[320px] max-h-[380px] object-cover"
+                    className="w-full animate-img shadow-xl h-full rounded-3xl min-h-[380px] object-cover"
                     src={ImageHome}
-                    alt="Imagen descriptiva de los servicios de lal empresa de software hook" />
+                    alt="Imagen descriptiva de los servicios de la empresa de software hook" />
             </div>
         </section>
     );

@@ -14,9 +14,10 @@ function PlanSection({plan}:Props) {
 
     const closePlan=()=>{
         setStatePlan(false);
-    }
+    };
+    
     return (
-        <section id="planes" className={`${statePlan ? 'animate-plan' : 'animate-close-plan'} z-99 relative pt-8 pb-20 border-b border-gray-700`}>
+        <section id="planes" className={`${statePlan ? 'animate-plan' : 'animate-close-plan'} z-99 relative pt-8 pb-20`}>
            <h4 className="w-full mt-10 font-bold text-center text-xl">
                 {type}
                 <br />
@@ -30,7 +31,7 @@ function PlanSection({plan}:Props) {
             <div className="w-full h-full p-12 flex-center gap-8 flex-wrap">
                 <GetPlan type={type as KeyOfServices}/>
             </div>
-            <p className="text-gray-400 w-full text-center text-sm m-0">Los planes <span className="font-bold text-secondary">NO</span> se pueden <span className="font-bold text-secondary">acumular</span>.</p>
+            <p className="text-gray-400 w-full text-center text-sm m-0 border-b pb-8 border-gray-700">Los planes <span className="font-bold text-secondary">NO</span> se pueden <span className="font-bold text-secondary">acumular</span>.</p>
         </section>
     );
 }

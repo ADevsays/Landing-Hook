@@ -2,67 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     @apply bg-primary text-secondary;
-};
+}
 
-.flex-center{
+;
+
+.blob {
+    background-image:url('./Imgs/WelcomeSection/Blob_Home.svg');
+    background-position: 48% 120%;
+    background-repeat: no-repeat;
+}
+
+.flex-center {
     @apply flex justify-center items-center;
-};
+}
 
-.flex-between{
+;
+
+.flex-between {
     @apply flex justify-between items-center;
-};
+}
 
-.btn-primary{
+;
+
+.btn-primary {
     @apply bg-terciary text-secondary;
-};
+}
 
-.btn-secondary{
+;
+
+.btn-secondary {
     @apply bg-primary text-secondary;
-};
+}
 
-.animate-blob{
+;
+
+.animate-blob {
     animation: blob 0.6s ease forwards;
     object-position: 55% 0px;
 }
 
-.animate-img{
+.animate-img {
     animation: img 0.5s ease forwards;
 }
 
-.animate-card{
-   animation: card 0.5s ease forwards; 
+.animate-card {
+    animation: card 0.5s ease forwards;
 }
 
-.animate-plan{
+.animate-plan {
     animation: plan 0.4s ease forwards;
 }
-.animate-close-plan{
+
+.animate-close-plan {
     animation: closePlan 0.4s ease forwards;
 }
 
-.animate-close-plan > *{
+.animate-close-plan>* {
     animation: closePlanChildren 0.3s forwards;
 }
 
 @keyframes cardPlanFadeIn {
-    from{
+    from {
         transform: scale(.9);
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
 @keyframes closePlanChildren {
-    to{
+    to {
         opacity: 0;
         min-height: 0;
         height: 0;
@@ -71,24 +89,26 @@ body{
 }
 
 @keyframes closePlan {
-    from{
+    from {
         height: 400px;
         min-height: 400px;
         opacity: 1;
     }
-    to{
+
+    to {
         height: 0px;
         opacity: 0;
     }
 }
 
 @keyframes plan {
-    from{
+    from {
         height: 0px;
         opacity: 0;
         min-height: 0px;
     }
-    to{
+
+    to {
         opacity: 1;
         min-height: 400px;
     }
@@ -99,7 +119,8 @@ body{
         opacity: 0;
         transform: translateY(300px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -109,7 +130,8 @@ body{
     from {
         transform: scale(.5);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
@@ -118,7 +140,8 @@ body{
     from {
         height: 0;
     }
-    to{
+
+    to {
         height: 800px;
     }
 }
