@@ -1,8 +1,10 @@
 import Button from "../../Button";
 import ImageHome from '../../../Imgs/WelcomeSection/Image_Home.jpg';
 import BlobBg from "./BlobBG";
+import { defaultMsg, whatsappApi } from "../../../consts/whatsappUrl";
 
 function WelcomeSection() {
+    const whatsapp = `${whatsappApi}${defaultMsg}`;
     return (
         <section
             className="flex lg:p-28 p-6 py-16  h-screen gap-20 relative overflow-hidden lg:text-left text-center">
@@ -14,7 +16,8 @@ function WelcomeSection() {
                     En Hook, estamos listos para transformar tus ideas en soluciones digitales excepcionales. Si estás interesado en nuestros servicios o tienes alguna pregunta, no dudes en contactarnos.
                 </p>
                 <div className="flex items-center lg:justify-start justify-center gap-4 flex-wrap mt-20">
-                    <Button className="flex-center gap-2 px-12 btn-primary md:w-auto w-full">
+                    <Button href={whatsapp} target="_blank"
+                        className="flex-center gap-2 px-12 btn-primary md:w-auto w-full">
                         Contáctanos
                         <span className="flex-center mt-1">
                             <i className="bi bi-arrow-right"></i>

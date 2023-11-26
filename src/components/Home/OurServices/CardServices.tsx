@@ -10,7 +10,6 @@ interface Props{
 };
 
 function CardServices({title, img, characteristics, animate, handlePlan}:Props) {
-
     const setPlan=()=>{
         handlePlan({state:true, type: title});
         document.getElementById('planes')
@@ -18,7 +17,7 @@ function CardServices({title, img, characteristics, animate, handlePlan}:Props) 
                     behavior:'smooth',
                     block: 'start',     
                 });
-    }
+    };
 
     return (
         <div 

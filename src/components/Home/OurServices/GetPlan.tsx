@@ -21,6 +21,7 @@ function GetPlan({ type }: { type: KeyOfServices }) {
                     icon={plan.icon}
                     name={plan.name}
                     content={plan.description}
+                    titleOfService={type}
                 />
             )) || serviceComponents.default}
         </>

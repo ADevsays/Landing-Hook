@@ -1,3 +1,4 @@
+import { whatsappApi } from "../../../consts/whatsappUrl";
 import Button from "../../Button";
 import CardPlanContent from "./CardPlanContent";
 
@@ -6,10 +7,12 @@ interface Props{
     name:string, 
     price:string, 
     content:string,
-    animateValue:number
+    animateValue:number,
+    titleOfService:string
 }
 
 function CardPlan(props:Props) {
+    const whatsapp = `${whatsappApi}Hola, estoy interesado en el paquete ${props.name} de ${props.titleOfService.toLowerCase()}`;
     return (
         <div 
             style={{
@@ -23,8 +26,11 @@ function CardPlan(props:Props) {
             <h4 className="text-lg py-4 font-bold border-b border-gray-400"><span className="text-gray-400">Desde</span> {props.price}</h4>
             <CardPlanContent content={props.content}/>
             <div className="flex-center">
-                <Button className="btn-primary py-2 mt-3 w-full">
-                    Comprar
+                <Button 
+                    href={whatsapp} 
+                    target="_blank" 
+                    className="btn-primary text-center  py-2 mt-3 w-full">
+                    Pedir
                 </Button>
             </div>
         </div>

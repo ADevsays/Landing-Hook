@@ -1,9 +1,12 @@
 import beneficServices from "../../../consts/benefictServices";
+import { whatsappApi } from "../../../consts/whatsappUrl";
 import Button from "../../Button";
 import SubtitleSection from "../SubtitleSection";
 import CardBenefitServices from "./CardBenefitServices";
 
 function ServicesBenefitSection() {
+    const whatsapp = `${whatsappApi}Hola, quiero agendar una reunión con ustedes para contarles más acerca del proyecto que tengo en mente...`;
+
     return (
         <section className="bg-primary-dark p-0 px-12 pb-20 w-full mt-4">
             <SubtitleSection subtitle="Beneficios de " underline="Contratarnos"/>
@@ -20,7 +23,7 @@ function ServicesBenefitSection() {
                }
             </div>
             <div className="w-full flex mt-8">
-                <Button className="mx-auto btn-primary px-12">Cuéntanos sobre tu proyecto</Button>
+                <Button href={whatsapp} target="_blank"className="mx-auto btn-primary px-12">Cuéntanos sobre tu proyecto</Button>
             </div>
         </section>
     );
