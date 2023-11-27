@@ -14,7 +14,7 @@ export default [
         name: 'Anthony - Venezuela'
     },
     {
-        content: '“Su testimonio”',
+        content: '"El equipo no solo cumplió, sino que superó mis expectativas en términos de profesionalismo, calidad y eficiencia. La calidad del código producido fue excepcional, lo que se tradujo en un producto final sólido y confiable”',
         img: ThirdTestimonialPicture,
         name: 'Jhoselyn - Bolivia'
     },
