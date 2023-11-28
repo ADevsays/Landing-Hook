@@ -129,19 +129,23 @@ body {
 @keyframes img {
     from {
         transform: scale(.5);
+        opacity: 0;
     }
 
     to {
         transform: scale(1);
+        opacity: 1;
     }
 }
 
 @keyframes blob {
     from {
         height: 0;
+        opacity: 0;
     }
 
     to {
         height: 800px;
+        opacity: 0.3;
     }
 }
