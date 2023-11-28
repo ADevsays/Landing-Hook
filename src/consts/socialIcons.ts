@@ -1,15 +1,15 @@
 const socialIcons = [
     {
         icon: 'tiktok',
-        path: 'url'
+        path: 'https://www.tiktok.com/@_hook_oficial'
     },
     {
         icon: 'instagram',
-        path: 'url'
+        path: 'https://www.instagram.com/hook_oficial23/'
     },
     {
         icon: 'twitter',
-        path: 'url'
+        path: 'https://twitter.com/_hook_oficial_'
     },
 ];
 
