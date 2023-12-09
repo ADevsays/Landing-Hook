@@ -1,10 +1,10 @@
-import defaultDataInvoice from "../../consts/defaultDataInvoice";
+import { dataInvoice } from "../../consts/dataInvoice.ts";
 import FormInvoices from "./FormInvoices";
 import {useState} from 'react';
 import RenderView from "./RenderView";
 
 function GenerateInvoices() {
-    const [invoiceData, setiInvoiceData] = useState(defaultDataInvoice as Invoice);
+    const [invoiceData, setiInvoiceData] = useState(dataInvoice as Invoice);
     const getInvoiceData=(invoiceData: Invoice)=>{
         setiInvoiceData(invoiceData);
     }

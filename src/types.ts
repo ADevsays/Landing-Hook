@@ -5,13 +5,17 @@ interface PlanInfo{
 
 type KeyOfServices = 'APP' | 'MAINTENANCE' | 'CONSULTANTS';
 
+interface Service {
+    service: string, 
+    quantity: number | string,
+    price: string | number,
+}
+
 interface Invoice{
     client: string, 
     date: string,
-    service: string, 
-    quantity: number | string,
-    payment: string, 
-    price: string | number,
+    payment: string,
+    services: Service[], 
     receives: string, 
     email:string,
     description:string

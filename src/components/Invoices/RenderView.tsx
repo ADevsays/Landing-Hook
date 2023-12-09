@@ -3,6 +3,7 @@ import { styles } from '../../consts/renderViewStyles';
 import {useEffect, useRef, useState } from 'react';
 import html2pdf from 'html2pdf.js';
 import Button from '../Button';
+import ServiceRenderView from './ServiceRenderView';
 
 interface Props{
     invoicesData: Invoice
@@ -27,17 +28,26 @@ function RenderView({invoicesData}: Props) {
     const generatePdf = () => {
         const input = componentRef.current;
         if (input && !pdfGenerated) {
-            html2pdf(input, {
+            const html2pdfIntance = new html2pdf(input, {
                 filename: `Factura-${uuidd}`, 
-                format: 'letter'
             });
+            html2pdfIntance.save();
             setPdfGenerated(true);
         }
     };
 
     const getTotal=()=>{
-        return Number(invoicesData.price) * Number(invoicesData.quantity);
+        const totalValue = invoicesData.services.reduce((acc, item)=>{
+            return acc += (Number(item.price) * Number(item.quantity))
+        }, 0)
+        return totalValue;
+    };
+
+    const comeBack=()=>{
+        setPdfGenerated(false);
+        window.location.reload();
     }
+
     return (
         <>
             <main style={styles.mainStyle} ref={componentRef}>
@@ -70,19 +80,15 @@ function RenderView({invoicesData}: Props) {
                         <h4 style={{ fontWeight: 'bold', fontSize: '18px' }}>Cliente:</h4>
                         <h4 style={{ fontWeight: 'bold', fontSize: '18px' }}>{invoicesData.client}</h4>
                     </div>
-                    <div style={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between', borderBottom: '2px solid #111827', paddingBottom: '18px' }}>
-                        <h5>Servicio: <span style={{ fontWeight: '500' }}>{invoicesData.service}</span></h5>
-                        <div style={{ display: 'flex', fontSize: '14px', gap: '20px', textAlign: 'right' }}>
-                            <div>
-                                Cantidad:
-                                <p style={{ fontWeight: '500' }}>{invoicesData.quantity}</p>
-                            </div>
-                            <div>
-                                Precio:
-                                <p style={{ fontWeight: '500' }}>${invoicesData.price}</p>
-                            </div>
-                        </div>
-                    </div>
+                   {
+                    invoicesData.services.map(({service, price, quantity})=> (
+                        <ServiceRenderView
+                            service={service}
+                            price={price}
+                            quantity={quantity}
+                        />
+                    ))
+                   }
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '24px' }}>
                         <p style={{ width: '60%' }}>{invoicesData.description}</p>
                         <h4 style={{ display: 'flex', gap: '6px', justifyContent: 'flex-end', fontSize: '16px' }}>Total: <span style={{ fontWeight: 'bold' }}>${getTotal()}</span></h4>
@@ -104,7 +110,7 @@ function RenderView({invoicesData}: Props) {
                 </footer>
             </main>
             <Button onClick={generatePdf} className='btn-primary mt-5 px-12'>Descargar PDF</Button>
-            <Button onClick={()=> window.location.reload()} className='btn-secondary mt-5 px-20'>Volver</Button>
+            <Button onClick={comeBack} className='btn-secondary mt-5 px-20'>Volver</Button>
         </>
     );
 }
