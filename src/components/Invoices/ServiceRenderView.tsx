@@ -5,7 +5,7 @@ interface Props {
 }
 function ServiceRenderView({service, quantity, price}: Props) {
     return (
-        <div style={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between', borderBottom: '2px solid #111827', alignItems:'center', paddingBottom:'18px' }}>
+        <div style={{ marginTop: '18px', display: 'flex', justifyContent: 'space-between', borderBottom: '2px solid #111827', paddingBottom:'18px' }}>
             <h5>Servicio: <span style={{ fontWeight: '500' }}>{service}</span></h5>
             <div style={{ display: 'flex', fontSize: '14px', gap: '20px', textAlign: 'right' }}>
                 <div>

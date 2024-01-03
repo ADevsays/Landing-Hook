@@ -6,7 +6,7 @@ export default [
     {
         content: '“Mau y Adevsays me ayudaron mucho con mi página, lo cual me dio mucho gusto porque antes ya me había reunido con dos profesionales y no me pudieron dar solución”',
         img: FirstTestimonialPicture,
-        name: 'Estefanía - Eduador'
+        name: 'Estefanía - Ecuador'
     },
     {
         content: '“Quiero expresar mi más sincero agradecimiento a Mau y Adevsays. Su trabajo en el desarrollo web es de alta calidad y profesionalismo, los recomiendo ampliamente”',
